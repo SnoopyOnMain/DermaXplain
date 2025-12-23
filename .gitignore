@@ -1,0 +1,51 @@
+# -------------------------
+# Data (never commit datasets)
+# -------------------------
+data/
+datasets/
+
+# -------------------------
+# Large files / archives
+# -------------------------
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# -------------------------
+# Model weights / checkpoints
+# -------------------------
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# -------------------------
+# Jupyter / Python
+# -------------------------
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.pyo
+
+# -------------------------
+# Virtual environments
+# -------------------------
+venv/
+.env/
+.venv/
+
+# -------------------------
+# OS / editor files
+# -------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+
