@@ -1,0 +1,125 @@
+DermaXplain – Environment Setup (WSL + Ubuntu + GPU)
+
+This project uses Python 3.12, PyTorch (nightly), and CUDA 12.8 on WSL2 (Ubuntu 24.04).
+The setup below has been validated on an NVIDIA RTX 50xx (sm_120) GPU.
+
+⚠️ Note: RTX 50xx GPUs require PyTorch nightly builds at the time of writing.
+
+1. System Requirements
+
+Windows 11 with WSL2 enabled
+
+Ubuntu 24.04 LTS (WSL distribution)
+
+NVIDIA GPU with recent drivers
+
+Git access to the DCU GitLab repository
+
+2. System Dependencies (Ubuntu / WSL)
+
+Open a WSL Ubuntu terminal and run:
+
+sudo apt update
+sudo apt install -y python3 python3-pip python3.12-venv git unzip
+
+3. Clone the Repository
+mkdir -p ~/Projects/DCU
+cd ~/Projects/DCU
+git clone git@gitlab.computing.dcu.ie:thierry.beliere2/2026-mcm-XAI-skin-lesion.git
+cd 2026-mcm-XAI-skin-lesion
+
+
+(Optional, but recommended)
+
+git config user.name "Your Name"
+git config user.email "your.email@dcu.ie"
+
+4. Create and Activate Virtual Environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+
+Upgrade packaging tools:
+
+python -m pip install --upgrade pip wheel setuptools
+
+5. Install PyTorch (CUDA 12.8, RTX 50xx compatible)
+
+Install nightly PyTorch (required for sm_120 GPUs):
+
+pip install --pre torch torchvision torchaudio \
+  --index-url https://download.pytorch.org/whl/nightly/cu128
+
+6. Verify GPU and CUDA
+
+Run:
+
+python - <<'EOF'
+import torch
+print("Torch version:", torch.__version__)
+print("CUDA available:", torch.cuda.is_available())
+if torch.cuda.is_available():
+    print("GPU:", torch.cuda.get_device_name(0))
+    print("CUDA runtime:", torch.version.cuda)
+    print("Compiled arch list:", torch.cuda.get_arch_list())
+    x = torch.randn(1024, 1024, device="cuda")
+    y = x @ x
+    torch.cuda.synchronize()
+    print("Matrix multiply OK:", y.shape)
+EOF
+
+
+You should see:
+
+CUDA available: True
+
+Your NVIDIA GPU name
+
+sm_120 in the architecture list
+
+Successful matrix multiplication
+
+7. Install Project Dependencies
+pip install numpy pandas matplotlib scikit-learn pillow opencv-python tqdm
+pip install captum shap lime
+pip install jupyter ipykernel
+
+
+Register the environment as a Jupyter kernel:
+
+python -m ipykernel install --user \
+  --name dermaxplain \
+  --display-name "DermaXplain (.venv)"
+
+
+Freeze dependencies:
+
+pip freeze > requirements.txt
+
+8. VS Code Configuration (Recommended)
+
+Open VS Code from WSL:
+
+code .
+
+
+Ensure the following extensions are installed in WSL:
+
+Python
+
+Jupyter
+
+Select Python interpreter:
+
+Ctrl + Shift + P -> Python: Select Interpreter
+
+Choose:
+
+.venv (Python 3.12.x) .venv/bin/python
+
+
+In Jupyter notebooks:
+
+Click Select Kernel
+
+Choose .venv / python3
