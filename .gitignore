@@ -1,9 +1,16 @@
 # -------------------------
 # Data (never commit datasets)
 # -------------------------
-data/
-datasets/
+data/raw/
+data/zips/
 
+# Ignore everything by default
+data/*
+
+# Allow processed outputs
+!data/preprocessed_manifests
+!data/preprocessed_manifests/*
+!data/*.csv
 # -------------------------
 # Large files / archives
 # -------------------------
