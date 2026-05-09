@@ -8,9 +8,9 @@ data/zips/
 data/*
 
 # Allow processed outputs
-!data/preprocessed_manifests
-!data/preprocessed_manifests/*
-!data/*.csv
+# !data/preprocessed_manifests
+# !data/preprocessed_manifests/*
+# !data/*.csv
 # -------------------------
 # Large files / archives
 # -------------------------
@@ -56,3 +56,9 @@ Thumbs.db
 # -------------------------
 *.log
 
+# -------------------------
+# Generated figures / plots
+# -------------------------
+*.png
+*.jpg
+*.jpeg
