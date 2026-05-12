@@ -57,8 +57,10 @@ Thumbs.db
 *.log
 
 # -------------------------
-# Generated figures / plots
+# Generated figures / plots / images / maps
 # -------------------------
 *.png
 *.jpg
 *.jpeg
+*.npz
+*.npy
