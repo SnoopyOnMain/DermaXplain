@@ -6,7 +6,7 @@ data/zips/
 
 # Ignore everything by default
 data/*
-
+outputs/*
 # Allow processed outputs
 #!data/preprocessed_manifests
 #!data/preprocessed_manifests/*
