@@ -1,0 +1,42 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+# ==========================================================
+# DermaXplain - Renku Environment
+# DCU MSc AI Practicum
+# Python 3.10 / NVIDIA RTX A6000
+# ==========================================================
+
+# Deep Learning
+torch==2.6.0
+torchvision==0.21.0
+torchaudio==2.6.0
+
+# Explainable AI
+captum
+shap
+lime
+
+# Data Science
+numpy
+pandas
+scipy
+scikit-learn
+scikit-image
+
+# Imaging
+opencv-python
+pillow
+imageio
+tifffile
+
+# Visualisation
+matplotlib
+
+# Utilities
+tqdm
+
+# Notebook Environment
+jupyter
+ipykernel
+ipywidgets
+notebook
