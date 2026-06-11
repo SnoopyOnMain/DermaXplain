@@ -24,13 +24,14 @@ scikit-learn
 scikit-image
 
 # Imaging
-opencv-python
+opencv-python-headless
 pillow
 imageio
 tifffile
 
 # Visualisation
 matplotlib
+seaborn
 
 # Utilities
 tqdm
