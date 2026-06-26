@@ -25,7 +25,7 @@ scikit-image
 statsmodels
 
 # Imaging
-opencv-python
+opencv-python-headless
 pillow
 imageio
 tifffile
@@ -33,6 +33,7 @@ tifffile
 # Visualisation
 matplotlib
 seaborn
+
 # Utilities
 tqdm
 
