@@ -63,4 +63,14 @@ Thumbs.db
 *.jpg
 *.jpeg
 *.npz
-*.npy
+*.npyresults/phase5_full_dataset_xai_concept_metrics.csv
+
+# Large generated full-dataset outputs
+results/full_dataset_chance_adjusted_checkpoint.csv
+results/full_dataset_chance_load_errors_checkpoint.csv
+results/full_dataset_pseudo_concepts_manifest.csv
+results/full_dataset_xai_manifest.csv
+results/phase5_full_dataset_chance_adjusted_xai_concept_metrics.csv
+results/phase5_full_dataset_xai_concept_metrics.csv
+results/phase5_full_dataset_chance_random_distributions.csv
+results/phase5_full_dataset_resolved_manifest.csv
