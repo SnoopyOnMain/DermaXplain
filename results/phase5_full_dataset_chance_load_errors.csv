@@ -1,0 +1,5 @@
+dataset,stem,type,path,error
+ham10000,ISIC_0029819,lesion_mask,/home/jovyan/work/2026-mcm-XAI-skin-lesion/outputs/full_dataset/pseudo_concepts/npz/ham10000/ISIC_0029819.npz,Empty lesion mask.
+ham10000,ISIC_0026042,lesion_mask,/home/jovyan/work/2026-mcm-XAI-skin-lesion/outputs/full_dataset/pseudo_concepts/npz/ham10000/ISIC_0026042.npz,Empty lesion mask.
+ham10000,ISIC_0029819,lesion_mask,/home/jovyan/work/2026-mcm-XAI-skin-lesion/outputs/full_dataset/pseudo_concepts/npz/ham10000/ISIC_0029819.npz,Empty lesion mask.
+ham10000,ISIC_0026042,lesion_mask,/home/jovyan/work/2026-mcm-XAI-skin-lesion/outputs/full_dataset/pseudo_concepts/npz/ham10000/ISIC_0026042.npz,Empty lesion mask.
