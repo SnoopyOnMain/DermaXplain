@@ -74,3 +74,9 @@ results/phase5_full_dataset_chance_adjusted_xai_concept_metrics.csv
 results/phase5_full_dataset_xai_concept_metrics.csv
 results/phase5_full_dataset_chance_random_distributions.csv
 results/phase5_full_dataset_resolved_manifest.csv
+
+# Generated evaluation outputs
+results/
+results_renku_260625/
+results/
+results_renku_260625/

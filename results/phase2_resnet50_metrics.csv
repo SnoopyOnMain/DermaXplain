@@ -1,2 +1,0 @@
-phase,dataset,split,auc_roc,macro_f1,best_threshold,best_val_accuracy,train_samples,val_samples,pos_weight
-phase2_resnet50,ham10000,validation,0.909013956769285,0.7585934799614329,0.8500000000000002,0.8252621068397404,8012,2003,8.002246856689453

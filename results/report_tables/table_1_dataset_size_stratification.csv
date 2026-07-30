@@ -1,5 +1,0 @@
-scale_tier,count,dataset_percentage
-Normal ($\geq 5\%$),11254,89.3
-Small ($2\%-<5\%$),971,7.7
-Tiny ($1\%-<2\%$),285,2.3
-Very Tiny ($<1\%$),99,0.8
